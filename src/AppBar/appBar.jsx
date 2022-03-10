@@ -21,7 +21,7 @@ import EditIcon from "@mui/icons-material/Edit";
 import GateLogo from "../assets/Logo.png";
 import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 export default function ButtonAppBar() {
-  const { height, width } = WindowDimension();
+  const {height, width} = WindowDimension();
   const [sideBar, setSideBar] = React.useState(false);
   function handleClick(e) {
     console.log(e);
@@ -29,7 +29,7 @@ export default function ButtonAppBar() {
   }
   const list = (anchor) => (
     <Box
-      sx={{ width: anchor === "top" || anchor === "bottom" ? "auto" : 250 }}
+      sx={{width: anchor === "top" || anchor === "bottom" ? "auto" : 250}}
       role="presentation"
       onClick={handleClick}
       onKeyDown={handleClick}
@@ -46,14 +46,14 @@ export default function ButtonAppBar() {
             }}
           />
         </ListItem>
-        {["Profile", "Edit Profile", "New Request"].map((text, index) => (
+        {["Profile", "New Request"].map((text, index) => (
           <ListItem button key={text}>
             <ListItemIcon>
               {index == 0 ? <AccountCircleIcon /> : <></>}
               {index == 1 ? <EditIcon /> : <></>}
               {index == 2 ? <AddCircleOutlineIcon /> : <></>}
             </ListItemIcon>
-            <ListItemText style={{ marginLeft: "-10px" }}>
+            <ListItemText style={{marginLeft: "-10px"}}>
               <Typography variant="HeadingList">{text}</Typography>
             </ListItemText>
           </ListItem>
@@ -64,15 +64,15 @@ export default function ButtonAppBar() {
   );
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" style={{ backgroundColor: "" }}>
+    <Box sx={{flexGrow: 1}}>
+      <AppBar position="static" style={{backgroundColor: ""}}>
         <Toolbar>
           <IconButton
             size="large"
             edge="start"
             color="inherit"
             aria-label="menu"
-            sx={{ mr: 2 }}
+            sx={{mr: 2}}
             onClick={handleClick}
           >
             <MenuIcon />
