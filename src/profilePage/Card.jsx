@@ -1,5 +1,5 @@
 import * as React from "react";
-import { styled } from "@mui/material/styles";
+import {styled} from "@mui/material/styles";
 import Card from "@mui/material/Card";
 import CardHeader from "@mui/material/CardHeader";
 import CardContent from "@mui/material/CardContent";
@@ -7,17 +7,17 @@ import CardActions from "@mui/material/CardActions";
 import Collapse from "@mui/material/Collapse";
 import Avatar from "@mui/material/Avatar";
 import IconButton from "@mui/material/IconButton";
-import { Button, Typography } from "@mui/material";
+import {Button, Typography} from "@mui/material";
 import ShareIcon from "@mui/icons-material/Share";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import EditIcon from "@mui/icons-material/Edit";
-import { Grid, TextField } from "@mui/material";
-import { makeStyles } from "@mui/styles";
+import {Grid, TextField} from "@mui/material";
+import {makeStyles} from "@mui/styles";
 import Requests from "./request";
 const ExpandMore = styled((props) => {
-  const { expand, ...other } = props;
+  const {expand, ...other} = props;
   return <IconButton {...other} />;
-})(({ theme, expand }) => ({
+})(({theme, expand}) => ({
   transform: !expand ? "rotate(0deg)" : "rotate(180deg)",
   marginLeft: "auto",
   transition: theme.transitions.create("transform", {
@@ -69,7 +69,7 @@ export default function ProfilePage(props) {
             </Grid>
           </Grid>
           <CardHeader
-            style={{ marginTop: "-10px" }}
+            style={{marginTop: "-10px"}}
             title={
               <TextField
                 id="outlined-helperText"
@@ -100,21 +100,16 @@ export default function ProfilePage(props) {
                     fontFamily: `'Robot',sans-serif`,
                     fontWeight: 700,
                   },
-                  endAdornment: (
-                    <Button variant="outlined" endIcon={<EditIcon />}>
-                      Edit
-                    </Button>
-                  ),
                 }}
               />
             }
           />
           <CardHeader
-            style={{ marginTop: "-20px" }}
+            style={{marginTop: "-20px"}}
             title={
               <TextField
                 id="outlined-basic"
-                label={<div style={{ marginRight: "12px" }}>Roll Number</div>}
+                label={<div style={{marginRight: "12px"}}>Roll Number</div>}
                 defaultValue={rollNumber}
                 fullWidth="true"
                 InputLabelProps={{
@@ -138,17 +133,12 @@ export default function ProfilePage(props) {
                     fontFamily: `'Robot',sans-serif`,
                     fontWeight: 700,
                   },
-                  endAdornment: (
-                    <Button variant="outlined" endIcon={<EditIcon />}>
-                      Edit
-                    </Button>
-                  ),
                 }}
               />
             }
           />
           <CardHeader
-            style={{ marginTop: "-20px" }}
+            style={{marginTop: "-20px"}}
             title={
               <TextField
                 id="outlined-helperText"
@@ -178,17 +168,12 @@ export default function ProfilePage(props) {
                     fontFamily: `'Robot',sans-serif`,
                     fontWeight: 700,
                   },
-                  endAdornment: (
-                    <Button variant="outlined" endIcon={<EditIcon />}>
-                      Edit
-                    </Button>
-                  ),
                 }}
               />
             }
           />
           <CardHeader
-            style={{ marginTop: "-20px" }}
+            style={{marginTop: "-20px"}}
             title={
               <TextField
                 id="outlined-helperText"
@@ -218,19 +203,20 @@ export default function ProfilePage(props) {
                     fontFamily: `'Robot',sans-serif`,
                     fontWeight: 700,
                   },
-                  endAdornment: (
-                    <Button variant="outlined" endIcon={<EditIcon />}>
-                      Edit
-                    </Button>
-                  ),
                 }}
               />
             }
           />
+          <div style={{margin: "auto", width: "90%", paddingBottom: "", backgroundColor: ""}}>
+            <Button variant="outlined" fullWidth={true} style={{marginBottom: "10px"}} endIcon={<EditIcon />}>
+              Edit
+            </Button>
+
+          </div>
         </Card>
       </Grid>
       <Grid item xs={12} sm={6}>
-        <Card style={{ margin: "10px" }}>
+        <Card style={{margin: "10px"}}>
           <CardHeader
             style={{
               display: "flex",
