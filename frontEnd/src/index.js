@@ -5,6 +5,7 @@ import {createTheme, ThemeProvider} from "@mui/material/styles";
 import App from "./App";
 import LoginOAuth from "./Login/loginPage";
 import InputForm from "./Form/InputForm.jsx";
+import Requests from "./AdminPage/profile-page.jsx"
 import ProfilePage from "./profilePage/profile-page.jsx";
 import reportWebVitals from "./reportWebVitals";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
@@ -21,6 +22,7 @@ ReactDOM.render(
         <Route path="/" element={<LoginOAuth />} />
         <Route path="/user/profile-page" element={<ProfilePage />} />
         <Route path="/user/Input" element={<InputForm />} />
+        <Route path="/Admin/requests" element={<Requests />} />
       </Routes>
     </BrowserRouter>
   </ThemeProvider>,

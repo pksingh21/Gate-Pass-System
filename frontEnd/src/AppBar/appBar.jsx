@@ -17,6 +17,7 @@ import ListItemText from "@mui/material/ListItemText";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import CoPresentIcon from '@mui/icons-material/CoPresent';
 import EditIcon from "@mui/icons-material/Edit";
 import GateLogo from "../assets/Logo.png";
 import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
@@ -48,15 +49,16 @@ export default function ButtonAppBar() {
             }}
           />
         </ListItem>
-        {["Profile", "New Request"].map((text, index) => (
+        {["Profile", "New Request", "All Requests"].map((text, index) => (
           <ListItem button key={text} onClick={() => {
             if (text === "Profile") navigate("/user/profile-page")
             else if (text === "New Request") navigate("/user/Input")
+            else if (text === "All Requests") navigate("/Admin/requests")
           }} >
             <ListItemIcon>
               {index == 0 ? <AccountCircleIcon /> : <></>}
               {index == 1 ? <EditIcon /> : <></>}
-              {index == 2 ? <AddCircleOutlineIcon /> : <></>}
+              {index == 2 ? <CoPresentIcon /> : <></>}
             </ListItemIcon>
             <ListItemText style={{marginLeft: "-10px"}}>
               <Typography variant="HeadingList">{text}</Typography>

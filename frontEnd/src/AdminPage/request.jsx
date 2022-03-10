@@ -43,6 +43,43 @@ export default function request(props) {
                   marginLeft: "1.5px",
                 }}
               >
+                User's Roll no.
+              </Typography>
+            }
+            defaultValue={date}
+            fullWidth="true"
+            inputProps={{
+              style: {
+                color: "grey",
+                fontFamily: `'Robot',sans-serif`,
+                fontWeight: 700,
+                borderColor: "white",
+              },
+            }}
+            InputProps={{
+              style: {
+                color: "grey",
+                fontFamily: `'Robot',sans-serif`,
+                fontWeight: 700,
+              },
+            }}
+          />
+        }
+      />
+
+      <CardHeader
+        style={{marginTop: "-20px"}}
+        title={
+          <TextField
+            id="outlined-helperText"
+            label={
+              <Typography
+                variant="h6a"
+                style={{
+                  marginRight: "-1px",
+                  marginLeft: "1.5px",
+                }}
+              >
                 Date
               </Typography>
             }
@@ -134,6 +171,10 @@ export default function request(props) {
           />
         }
       />
+      <div style={{display: "flex", justifyItems: "center", justifyContent: "center", alignItems: "center", paddingBottom: "20px"}} >
+        <Button color="success" variant="outlined" style={{paddingBottom: ""}}>Accept User's Pass</Button>
+      </div>
+
       <div style={{display: "flex", justifyItems: "center", justifyContent: "center", alignItems: "center", paddingBottom: "20px"}} >
         <Button color="error" variant="outlined" style={{paddingBottom: ""}}>Delete Pass Request</Button>
       </div>

@@ -47,7 +47,7 @@ export default function ProfilePage(props) {
               justifyContent: "center",
               justifyItems: "center",
             }}
-            title={<Typography variant="h1">USER PROFILE</Typography>}
+            title={<Typography variant="h1">YOUR PROFILE</Typography>}
           />
           <Grid
             container
@@ -227,7 +227,7 @@ export default function ProfilePage(props) {
               justifyContent: "center",
               justifyItems: "center",
             }}
-            title={<Typography variant="h1">USER REQUESTS</Typography>}
+            title={<Typography variant="h1">YOUR REQUESTS</Typography>}
           />
           <CardContent
             style={{
