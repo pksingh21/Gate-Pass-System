@@ -20,9 +20,11 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import EditIcon from "@mui/icons-material/Edit";
 import GateLogo from "../assets/Logo.png";
 import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
+import {useNavigate} from "react-router-dom"
 export default function ButtonAppBar() {
   const {height, width} = WindowDimension();
   const [sideBar, setSideBar] = React.useState(false);
+  const navigate = useNavigate()
   function handleClick(e) {
     console.log(e);
     setSideBar(!sideBar);
@@ -47,7 +49,10 @@ export default function ButtonAppBar() {
           />
         </ListItem>
         {["Profile", "New Request"].map((text, index) => (
-          <ListItem button key={text}>
+          <ListItem button key={text} onClick={() => {
+            if (text === "Profile") navigate("/user/profile-page")
+            else if (text === "New Request") navigate("/user/Input")
+          }} >
             <ListItemIcon>
               {index == 0 ? <AccountCircleIcon /> : <></>}
               {index == 1 ? <EditIcon /> : <></>}
